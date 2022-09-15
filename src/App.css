@@ -4,7 +4,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background-color: aliceblue; */
+    background-color: #181818;
 }
 .search{
     /* position: absolute;
