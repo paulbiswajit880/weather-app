@@ -7,8 +7,7 @@ body{
     background-color: #181818;
 }
 .search{
-    /* position: absolute;
-    top: 30px;   */
+    
     margin-left: 50px;
     margin-bottom: 10px;
 }
@@ -29,7 +28,7 @@ body{
 
     width: 300px;
     height: 400px;
-    /* background-color: rgb(29, 26, 26); */
+    
     border-radius: 1rem;
     
     color: white;
@@ -49,10 +48,7 @@ body{
     border-radius: 1rem;
 
 }
-/* .icon img{
-    height: 100px;
-    width: 100px;
-} */
+
 .temp{
     font-size: 2rem;
     font-family: 'DynaPuff', cursive;
