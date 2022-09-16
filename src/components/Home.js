@@ -15,11 +15,11 @@ export default function Index() {
 
     useEffect(() => {
         const fechApi = async () => {
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchcity}&appid=c5607728469a54acb3f94c6f650c5b2b`
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchcity}&appid=c5607728469a54acb3f94c6f650c5b2b&units=metric`
             const response = await fetch(url);
             const resJson = await response.json()
             setIco(resJson.weather)
-            console.log(resJson.weather);
+            // console.log(resJson.weather);
             setCity(resJson.main)
 
 
@@ -47,21 +47,26 @@ export default function Index() {
             </div>) :
                 (<div className="card">
                 {ico.map((e,id)=>{
-                    return(<><div className="icon"><img key={id} src={`http://openweathermap.org/img/w/${e.icon}.png`} alt="" /></div>
+                    return(<><div className="round"><div className="icon"><img key={id} src={`http://openweathermap.org/img/w/${e.icon}.png`} alt="" /></div><span className='des'>{e.main}</span>
+                    <div id="temp" className="temp">{Math.ceil(city.temp)}°C</div></div>
                     </>)
-                })}
                     
-                    <div id="temp" className="temp">{Math.ceil(((city.temp) - 273.15))}°C</div>
-                    <div id="temp-f" className="temp-f">Feels like {Math.floor(((city.feels_like) - 273.15))}°C</div>
+                })}
+                
+                    <div id="temp-f" className="temp-f">Feels like {Math.ceil(city.feels_like)}°C</div>
+                    <div id="temp-f" className="temp-f">Humidity {city.humidity}%</div>
 
 
                     <div id="place" className="place">{searchcity.toUpperCase()}</div>
 
                     <div className="minmax">
-                        <span className="mtemp">{Math.floor(((city.temp_min) - 273.15))}°C MIN </span>
-                        <span className="mtemp"> {Math.ceil(((city.temp_max) - 273.15))}°C MAX</span>
+                        <span className="mtemp">{Math.ceil(city.temp_min)}°C MIN |</span>
+                        <span className="mtemp">| {Math.ceil(city.temp_max)}°C MAX</span>
+                        
+
 
                     </div>
+                    
                     
                 </div>)}
 
