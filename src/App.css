@@ -74,6 +74,7 @@ body {
 .temp {
     font-size: 1.4rem;
     font-family: 'DynaPuff', cursive;
+    margin: 9px;
 }
 
 .temp-f {
