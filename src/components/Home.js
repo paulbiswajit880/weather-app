@@ -25,9 +25,7 @@ export default function Index() {
                 <div id="temp" className="temp">0°C</div>
                 <div id="temp-f" className="temp-f">Feels like 0°C</div>
                 <div id="place" className="place">{searchcity.toUpperCase()}</div>
-                <div className="minmax">
-                    <span className="mtemp">0°C MIN </span><span className="mtemp"> 0°C MAX</span>
-                </div>
+                <small>Check your search city</small>
             </div>) :
                 (<div className="card">
                 <div class="wave wave-1"></div>
@@ -47,8 +45,8 @@ export default function Index() {
                     <div id="temp-f" className="temp-f">Humidity {city.humidity}%</div>
                     <div id="place" className="place">{searchcity.toUpperCase()}</div>
                     <div className="minmax">
-                        <span className="mtemp">{Math.floor(city.temp_min)}°C MIN |</span>
-                        <span className="mtemp">| {Math.ceil(city.temp_max)}°C MAX</span>
+                        <small className="mtemp">{Math.floor(city.temp_min-1)}°C MIN |</small>
+                        <small className="mtemp">| {Math.ceil(city.temp_max+1)}°C MAX</small>
                     </div>
                 </div>)}
 

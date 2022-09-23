@@ -108,6 +108,13 @@ body {
     top: -30px;
     z-index: 100;
     background-color: #ffffffc2;
+    animation: zoom 0.7s   ;
+
+}
+@keyframes zoom{
+    0%{transform: scale(0);}
+    50%{transform: scale(1.2);}
+    100%{transform: scale(1);}
 }
 
 .temp {
@@ -118,23 +125,12 @@ body {
 
 .temp-f {
     font-size: 1rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.date {
-    font-size: 1.3rem;
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.time {
-    font-size: 1.1rem;
-    font-weight: bold;
-
+    font-weight: 700;
+    font-family: 'Baloo Bhai 2', cursive;
 }
 
 .place {
     font-size: 1.3rem;
     font-weight: bolder;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Baloo Bhai 2', cursive;
 }
