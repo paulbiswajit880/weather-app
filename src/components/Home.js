@@ -30,12 +30,15 @@ export default function Index() {
                 </div>
             </div>) :
                 (<div className="card">
+                <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
                     {ico.map((e, id) => {
                         return (<><div className="round">
                             <div className="icon">
                                 <img key={id} src={`http://openweathermap.org/img/w/${e.icon}.png`} alt="" />
                             </div>
-                            <span className='des'>{e.main}</span>
+                            <small className='des'>Mostly {e.main}</small>
                             <div id="temp" className="temp">{Math.floor(city.temp)}°C</div>
                         </div>
                         </>)

@@ -24,40 +24,77 @@ body {
 }
 
 .card {
+    background-color: aliceblue;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background-color: white;
+
     width: 300px;
     height: 400px;
-
+    z-index: 100;
     border-radius: 1rem;
 
-
+    overflow: hidden;
     text-align: center;
     position: relative;
 
 }
 
-/* .card::before{
-    content: "";
-    background: url("./data/Wallpaper\ -\ 71569.mp4") ;
+.wave {
+    border: none;
     position: absolute;
-    width: 300px;
+    
+    top: 50%;
+    left: -15%;
+    border-radius: 48%;
+    width: 400px;
     height: 400px;
+    animation: rotate 4.2s linear infinite;
     z-index: -1;
-    opacity: 1;
-    border-radius: 1rem;
+}
 
-} */
+.wave:nth-child(1) {
+    animation: rotate 4.1s linear infinite reverse;
+    background-color: rgb(255 255 255 / 11%);
+    top: 20%;
+    z-index: 10;
+}
+
+.wave:nth-child(2) {
+    animation: rotate 4.1s linear infinite reverse;
+    background-color: rgb(10 238 140 / 9%);
+    top: 23%;
+    z-index: 20;
+
+}
+
+.wave:nth-child(3) {
+    top: 25%;
+    animation: rotate 4.3s linear infinite;
+    background-color: rgb(14 234 231 / 7%);
+    z-index: 11;
+}
+
+@keyframes rotate {
+    form {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 .icon img {
     margin: -11px;
 }
 
 .des {
-    font-family: 'DynaPuff', cursive;
+    font-family: 'EB Garamond', serif;
 
 }
 
@@ -67,8 +104,10 @@ body {
     width: 136px;
     height: 115px;
     padding-top: 20px;
-
-    background-color: darkgray;
+    position: relative;
+    top: -30px;
+    z-index: 100;
+    background-color: #ffffffc2;
 }
 
 .temp {
